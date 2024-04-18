@@ -25,7 +25,7 @@ CGameStateRun::~CGameStateRun()
 
 void CGameStateRun::OnBeginState()
 {
-	stage = 0;
+	stage = 1;
 }
 
 void CGameStateRun::OnMove()							// ²¾°Ê¹CÀ¸¤¸¯À
@@ -120,7 +120,7 @@ void CGameStateRun::OnInit()  								// ¹CÀ¸ªºªì­È¤Î¹Ï§Î³]©
 	smallRectangle5.SetTopLeft(400, 600);
 
 	smallRectangle6.LoadBitmapByString({ "../resources/smallRectangle.bmp" }, RGB(255, 255, 255));
-	smallRectangle6.SetTopLeft(600, 300);
+	smallRectangle6.SetTopLeft(700, 300);
 }
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
