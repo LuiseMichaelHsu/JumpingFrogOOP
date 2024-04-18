@@ -65,7 +65,8 @@ namespace game_framework {
 	protected:
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		CMovingBitmap logo;								// csie的logo
+		void draw_text();
+		CMovingBitmap background;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -78,6 +79,7 @@ namespace game_framework {
 		CGameStateRun(CGame *g);
 		~CGameStateRun();
 		void OnBeginState();							// 設定每次重玩所需的變數
+		void getDeltaTime();
 		void OnInit();  								// 遊戲的初值及圖形設定
 		void OnKeyDown(UINT, UINT, UINT);
 		void OnKeyUp(UINT, UINT, UINT);
@@ -89,6 +91,62 @@ namespace game_framework {
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
+	private:
+		const int gravity_constant = 10;
+		int stage = 1;
+		int sub_phase = 1;
+		int sideStrength = 25;
+		int jumpStrength = 25;
+		int finalJump;
+
+		bool left = false;
+		int leftLimit;
+		clock_t leftTime;
+		bool justJumpedLeft = false;
+
+		bool right = false;
+		int rightLimit;
+		clock_t rightTime;
+		bool justJumpedRight = false;
+
+		bool jumping = false;
+		int jumpLimit;
+		clock_t jumpTime;
+
+		float previousTime;
+		float currentTime;
+		float deltaTime;
+		CMovingBitmap backgroundStage1;
+		CMovingBitmap backgroundStage2;
+		CMovingBitmap character;
+		CMovingBitmap basePlatform;
+		CMovingBitmap platMid;
+		CMovingBitmap bigBox1;
+		CMovingBitmap ground1;
+		CMovingBitmap ground2;
+		CMovingBitmap wall1;
+		CMovingBitmap wall2;
+		CMovingBitmap wall3;
+		CMovingBitmap wall4;
+		CMovingBitmap smallRectangle1;
+		CMovingBitmap smallRectangle2;
+		CMovingBitmap smallRectangle3;
+		CMovingBitmap smallRectangle4;
+		CMovingBitmap smallRectangle5;
+		CMovingBitmap smallRectangle6;
+
+		void inGameGravity();
+		void inGameJumpingMechanic();
+
+		bool wallBounce();
+		bool mcCollide();
+		bool mcBump();
+		bool smallPlatformCollision(CMovingBitmap);
+		bool smallPlatformBump(CMovingBitmap);
+
+		bool nextStage();
+
+		double getDistance(int ,int ,int ,int );
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -101,11 +159,13 @@ namespace game_framework {
 		CGameStateOver(CGame *g);
 		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();
+		void OnLButtonDown(UINT nFlags, CPoint point);
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		int counter;	// 倒數之計數器
+		CMovingBitmap endBackground;
 	};
 
 }

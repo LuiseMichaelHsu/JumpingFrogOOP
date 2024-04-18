@@ -267,6 +267,8 @@
     <ResourceCompile Include="Source\Core\game.rc" />
   </ItemGroup>
   <ItemGroup>
+	<Content Include="Resources\wrog.bmp" />
+	<Content Include="Resources\wellsoreal.bmp" />
     <Image Include="resources\bitmap1.bmp" />
     <Image Include="Resources\Game Framework.png" />
     <Image Include="resources\game.ico" />

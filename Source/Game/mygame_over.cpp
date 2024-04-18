@@ -19,7 +19,7 @@ CGameStateOver::CGameStateOver(CGame *g): CGameState(g)
 
 void CGameStateOver::OnMove()
 {
-	GotoGameState(GAME_STATE_INIT);
+	
 }
 
 void CGameStateOver::OnBeginState()
@@ -39,13 +39,20 @@ void CGameStateOver::OnInit()
 	Sleep(1000);				// 放慢，以便看清楚進度，實際遊戲請刪除此Sleep
 	//
 	// 最終進度為100%
+	endBackground.LoadBitmapByString({ "../resources/gameover.bmp" });
+	endBackground.SetTopLeft(0, 0);
 	//
 	ShowInitProgress(100, "OK!");
 
 	Sleep(1000);
 }
 
+void CGameStateOver::OnLButtonDown(UINT nChar, CPoint point)
+{
+	GotoGameState(GAME_STATE_INIT);
+}
+
 void CGameStateOver::OnShow()
 {
-
+	endBackground.ShowBitmap();
 }
