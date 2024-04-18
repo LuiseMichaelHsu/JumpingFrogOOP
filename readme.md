@@ -27,15 +27,15 @@ Timeline (Modified Targets) Compiltions
 
 |      Week     |   Objective   |
 | ------------- | ------------- |
-|      Week1    |      N/A      | Done
-|      Week2    |   Proposal    | Done
-|      Week3    |   Player Design   | Done
-|      Week4    |   Implementing Basic Gravity Implications   | Done
-|      Week5    |   Basic Player Movement Controls   | Done
-|      Week6    |   Understanding The Implementation Of Time in Leistungsstarkes Game Framework and Applying It To The Game   | Done
+|      Week1    |      N/A      |
+|      Week2    |   Proposal    |
+|      Week3    |   Player Design   |
+|      Week4    |   Implementing Basic Gravity Implications   |
+|      Week5    |   Basic Player Movement Controls   |
+|      Week6    |   Understanding The Implementation Of Time in Leistungsstarkes Game Framework and Applying It To The Game   |
 |      Week7    |   Applying Player Jump Mechanic   | Done
-|      Week8    |   Physics Polishing   | Done
-|  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen)   | Done
+|      Week8    |   Physics Polishing   |
+|  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen)   |
 |      Week10   |   Objective   |
 |      Week11   |   Objective   |
 |      Week12   |   Objective   |
@@ -45,7 +45,6 @@ Timeline (Modified Targets) Compiltions
 |      Week16   |   Objective   |
 |      Week17   |   Objective   |
 |      Week18   |   Objective   |
-| ------------- | ------------- |
 
 
 
