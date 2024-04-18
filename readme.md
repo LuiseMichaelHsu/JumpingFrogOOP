@@ -36,15 +36,15 @@ Timeline (Modified Targets) Compiltions
 |      Week7    |   Applying Player Jump Mechanic  (DONE) |
 |      Week8    |   Physics Polishing  (DONE) |
 |  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen)  (DONE) |
-|      Week10   |   Objective   |
-|      Week11   |   Objective   |
-|      Week12   |   Objective   |
-|      Week13   |   Objective   |
-|      Week14   |   Objective   |
-|      Week15   |   Objective   |
-|      Week16   |   Objective   |
-|      Week17   |   Objective   |
-|      Week18   |   Objective   |
+|      Week10   |   Player Movement Polishing   |
+|      Week11   |   Platform Design   |
+|      Week12   |   Stage Polishing   |
+|      Week13   |   Stage Polishing   |
+|      Week14   |   Stage Modifiers   |
+|      Week15   |   Level Designs   |
+|      Week16   |   Level Designs   |
+|      Week17   |   Level Designs   |
+|      Week18   |   Polishing   |
 
 
 
