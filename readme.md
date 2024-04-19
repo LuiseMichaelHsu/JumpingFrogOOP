@@ -39,10 +39,10 @@ Timeline (Modified Targets) Compiltions
 |      Week10   |   Player Movement Polishing   |
 |      Week11   |   Platform Design   |
 |      Week12   |   Stage Polishing   |
-|      Week13   |   Stage Polishing   |
-|      Week14   |   Stage Modifiers   |
+|      Week13   |   Stage Modifiers   |
+|      Week14   |   Death Mechanic   |
 |      Week15   |   Level Designs   |
-|      Week16   |   Level Designs   |
+|      Week16   |   Stage Polishing   |
 |      Week17   |   Level Designs   |
 |      Week18   |   Polishing   |
 
