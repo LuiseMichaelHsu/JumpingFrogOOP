@@ -45,7 +45,7 @@ Timeline (Modified Targets) Compiltions
 |      Week16   |   Stage Polishing   |
 |      Week17   |   Level Designs   |
 |      Week18   |   Polishing   |
-current completion(50%)
+| current completion | (50%) |
 
 
 
