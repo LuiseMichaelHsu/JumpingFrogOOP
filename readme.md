@@ -28,14 +28,14 @@ Timeline (Modified Targets) Compiltions
 |      Week     |   Objective   |
 | ------------- | ------------- |
 |      Week1    |      N/A  (DONE)    |
-|      Week2    |   Proposal 1% (DONE)  |
-|      Week3    |   Player Design 2% (DONE) |
-|      Week4    |   Implementing Basic Gravity Implications 10% (DONE) |
-|      Week5    |   Basic Player Movement Controls 10% (DONE)|
-|      Week6    |   Understanding The Implementation Of Time in Leistungsstarkes Game Framework and Applying It To The Game 7% (DONE) |
-|      Week7    |   Applying Player Jump Mechanic 10% (DONE) |
-|      Week8    |   Physics Polishing 5% (DONE) |
-|  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen) 5% (DONE) |
+|      Week2    |   Proposal (DONE) 1% |
+|      Week3    |   Player Design (DONE) 2% |
+|      Week4    |   Implementing Basic Gravity Implications (DONE) 10% |
+|      Week5    |   Basic Player Movement Controls (DONE) 10% |
+|      Week6    |   Understanding The Implementation Of Time in Leistungsstarkes Game Framework and Applying It To The Game (DONE) 7% |
+|      Week7    |   Applying Player Jump Mechanic (DONE) 10% |
+|      Week8    |   Physics Polishing (DONE) 5% |
+|  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen) (DONE) 5% |
 |      Week10   |   Player Movement Polishing  |
 |      Week11   |   Platform Design   |
 |      Week12   |   Stage Polishing and Collision Polishing  |
