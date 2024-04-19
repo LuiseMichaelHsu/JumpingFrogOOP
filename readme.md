@@ -38,7 +38,7 @@ Timeline (Modified Targets) Compiltions
 |  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen) 5% (DONE) |
 |      Week10   |   Player Movement Polishing  |
 |      Week11   |   Platform Design   |
-|      Week12   |   Stage Polishing   |
+|      Week12   |   Stage Polishing and Collision Polishing  |
 |      Week13   |   Stage Modifiers   |
 |      Week14   |   Death Mechanic   |
 |      Week15   |   Level Designs   |
