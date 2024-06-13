@@ -37,7 +37,8 @@
  *      2. Replace the demonstration of animation as a new bouncing ball.
  *      3. Use ShowInitProgress(percent) to display loading progress.
 */
-
+#include "BasicPlatform.h"
+#include "GameState.h"
 
 namespace game_framework {
 	/////////////////////////////////////////////////////////////////////////////
@@ -61,12 +62,18 @@ namespace game_framework {
 		void OnInit();  								// 遊戲的初值及圖形設定
 		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnKeyUp(UINT, UINT, UINT); 				// 處理鍵盤Up的動作
+		void OnKeyDown(UINT, UINT, UINT);
 		void OnLButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 	protected:
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
 		void draw_text();
 		CMovingBitmap background;
+		CMovingBitmap backgroundSlide;
+		CMovingBitmap sPointer;
+		int state = 1;
+		int option = 1;
+		GameState gameState;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -98,6 +105,10 @@ namespace game_framework {
 		int sideStrength = 25;
 		int jumpStrength = 25;
 		int finalJump;
+		int firstTime;
+		int firstStart;
+		bool ghostMode;
+		GameState gameState;
 
 		bool left = false;
 		int leftLimit;
@@ -118,22 +129,32 @@ namespace game_framework {
 		float deltaTime;
 		CMovingBitmap backgroundStage1;
 		CMovingBitmap backgroundStage2;
+		CMovingBitmap backgroundStage3;
+		CMovingBitmap backgroundStage4;
+		CMovingBitmap backgroundStage5;
+		CMovingBitmap backgroundStage6;
+		CMovingBitmap backgroundStage7;
+		CMovingBitmap backgroundStage8;
+		CMovingBitmap backgroundStage9;
+		CMovingBitmap backgroundStage10;
 		CMovingBitmap character;
-		CMovingBitmap basePlatform;
-		CMovingBitmap platMid;
-		CMovingBitmap bigBox1;
-		CMovingBitmap ground1;
-		CMovingBitmap ground2;
-		CMovingBitmap wall1;
-		CMovingBitmap wall2;
-		CMovingBitmap wall3;
-		CMovingBitmap wall4;
-		CMovingBitmap smallRectangle1;
-		CMovingBitmap smallRectangle2;
-		CMovingBitmap smallRectangle3;
-		CMovingBitmap smallRectangle4;
-		CMovingBitmap smallRectangle5;
-		CMovingBitmap smallRectangle6;
+		CMovingBitmap flag;
+		CMovingBitmap win;
+		bool winsGame;
+
+		CMovingBitmap Cheating;
+		bool cheatSheet;
+
+		CMovingBitmap bigBox;
+		CMovingBitmap wallPlat;
+
+		BasicPlatform ground1;
+		BasicPlatform ground2;
+
+		BasicPlatform basicP1;
+		BasicPlatform basicP2;
+		BasicPlatform basicP3;
+		BasicPlatform basicP4;
 
 		void inGameGravity();
 		void inGameJumpingMechanic();
@@ -147,6 +168,11 @@ namespace game_framework {
 		bool nextStage();
 
 		double getDistance(int ,int ,int ,int );
+
+		void EasyClear();
+		void EndMsg();
+		void WinMsg();
+		void DebugModeMsg();
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -159,7 +185,7 @@ namespace game_framework {
 		CGameStateOver(CGame *g);
 		void OnBeginState();							// 設定每次重玩所需的變數
 		void OnInit();
-		void OnLButtonDown(UINT nFlags, CPoint point);
+		void OnKeyDown(UINT, UINT, UINT);
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面

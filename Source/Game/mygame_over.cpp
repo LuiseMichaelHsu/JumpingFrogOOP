@@ -47,9 +47,11 @@ void CGameStateOver::OnInit()
 	Sleep(1000);
 }
 
-void CGameStateOver::OnLButtonDown(UINT nChar, CPoint point)
+void CGameStateOver::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-	GotoGameState(GAME_STATE_INIT);
+	if (nChar == 13) {
+		GotoGameState(GAME_STATE_INIT);
+	}
 }
 
 void CGameStateOver::OnShow()

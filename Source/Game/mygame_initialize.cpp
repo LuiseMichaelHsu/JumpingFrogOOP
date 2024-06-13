@@ -12,7 +12,7 @@ using namespace game_framework;
 // 這個class為遊戲的遊戲開頭畫面物件
 /////////////////////////////////////////////////////////////////////////////
 
-CGameStateInit::CGameStateInit(CGame *g) : CGameState(g)
+CGameStateInit::CGameStateInit(CGame* g) : CGameState(g)
 {
 }
 
@@ -27,6 +27,10 @@ void CGameStateInit::OnInit()
 	// 
 	background.LoadBitmapByString({ "../resources/titleScreen.bmp" });
 	background.SetTopLeft(0, 0);
+	backgroundSlide.LoadBitmapByString({ "../resources/titleScreen.bmp" });
+	backgroundSlide.SetTopLeft(0, 0);
+	sPointer.LoadBitmapByString({ "../resources/wrog.bmp" });
+	sPointer.SetTopLeft(0, 0);
 	//
 	// 開始載入資料
 	//
@@ -38,6 +42,8 @@ void CGameStateInit::OnInit()
 
 void CGameStateInit::OnBeginState()
 {
+	state = 1;
+	option = 1;
 }
 
 void CGameStateInit::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
@@ -45,15 +51,25 @@ void CGameStateInit::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 }
 
+void CGameStateInit::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
+{
+	if (nChar == 13) {
+		if (option == 1) {
+			GotoGameState(GAME_STATE_RUN);
+		}
+	}
+}
+
 void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	GotoGameState(GAME_STATE_RUN);		// 切換至GAME_STATE_RUN
 }
 
 void CGameStateInit::OnShow()
 {
-	background.ShowBitmap();
-	draw_text();
+	if (state == 1) {
+		background.ShowBitmap();
+		draw_text();
+	}
 }
 
 void CGameStateInit::draw_text() {
@@ -61,7 +77,7 @@ void CGameStateInit::draw_text() {
 
 	/* Print title */
 	CTextDraw::ChangeFontLog(pDC, 36, "times new roman", RGB(255, 255, 255));
-	CTextDraw::Print(pDC, 290, 100, "Press any key to start");
+	CTextDraw::Print(pDC, 290, 100, "Press Enter key to start");
 
 	CDDraw::ReleaseBackCDC();
 }
