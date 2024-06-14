@@ -7,6 +7,7 @@
 #include "../Library/gamecore.h"
 #include "mygame.h"
 #include <chrono>
+#include <string>
 
 using namespace game_framework;
 
@@ -49,6 +50,12 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		character.SetTopLeft(character.GetLeft(), character.GetTop() - 990);
 		jumpLimit = jumpLimit - 990;
 	}
+
+	//Transition to level 6
+	if (character.GetLeft() >= 800 && stage == 5) {
+		stage = 6;
+	}
+
 	//invisible left and right walls
 	//Stops player from escaping the "world"
 	if (character.GetLeft() <= 0) {
@@ -70,7 +77,7 @@ void CGameStateRun::OnMove()							// 移動遊戲元素
 		//prevent go through platforms
 		else if (mcBump() == true && mcCollide() == false) {
 			jumping = false;
-			character.SetTopLeft(character.GetLeft(), character.GetTop());
+			character.SetTopLeft(character.GetLeft(), character.GetTop()+10);
 			inGameGravity(); //to force player to fall when collision is active (i.e. when player is right next to a wall)
 		}
 		else {
@@ -621,10 +628,9 @@ void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
 void CGameStateRun::EasyClear() {
 	CDC* pDC = CDDraw::GetBackCDC();
 
-	/* Print title */
 	CTextDraw::ChangeFontLog(pDC, 36, "times new roman", RGB(255, 255, 255));
-	CTextDraw::Print(pDC, 100, 400, "Congratulations, You Have Cleared Easy Mode");
-	CTextDraw::Print(pDC, 100, 500, "Click Enter To Start Hard Mode");
+	CTextDraw::Print(pDC, 100, 400, "Congratulations, You Have Cleared Easy Levels");
+	CTextDraw::Print(pDC, 100, 500, "Smash into the right wall to go to level 6");
 	CTextDraw::Print(pDC, 100, 600, "P.S. Don't Fall");
 
 	CDDraw::ReleaseBackCDC();
@@ -633,7 +639,6 @@ void CGameStateRun::EasyClear() {
 void CGameStateRun::EndMsg() {
 	CDC* pDC = CDDraw::GetBackCDC();
 
-	/* Print title */
 	CTextDraw::ChangeFontLog(pDC, 36, "times new roman", RGB(255, 255, 255));
 	CTextDraw::Print(pDC, 50, 50, "Interact With The Pink Frog To End The Game");
 
@@ -643,7 +648,6 @@ void CGameStateRun::EndMsg() {
 void CGameStateRun::WinMsg() {
 	CDC* pDC = CDDraw::GetBackCDC();
 
-	/* Print title */
 	CTextDraw::ChangeFontLog(pDC, 36, "times new roman", RGB(1, 255, 1));
 	CTextDraw::Print(pDC, 60, 700, "Click Enter To Go Back To The Main Menu");
 
@@ -653,9 +657,17 @@ void CGameStateRun::WinMsg() {
 void CGameStateRun::DebugModeMsg() {
 	CDC* pDC = CDDraw::GetBackCDC();
 
-	/* Print title */
 	CTextDraw::ChangeFontLog(pDC, 20, "times new roman", RGB(255, 255, 255));
 	CTextDraw::Print(pDC, 0, 0, "Debug Mode Is On");
+
+	CDDraw::ReleaseBackCDC();
+}
+
+void CGameStateRun::levelIndicator() {
+	CDC* pDC = CDDraw::GetBackCDC();
+
+	CTextDraw::ChangeFontLog(pDC, 20, "times new roman", RGB(255, 255, 255));
+	CTextDraw::Print(pDC, 900, 0, "Level " + std::to_string(stage));
 
 	CDDraw::ReleaseBackCDC();
 }
@@ -756,7 +768,7 @@ void CGameStateRun::OnShow()
 
 		backgroundStage6.ShowBitmap();
 		if (firstTime <= 1) {
-			character.SetTopLeft(50, 800);
+			character.SetTopLeft(50, 850);
 			firstTime = firstTime + 1;
 		}
 		else {
@@ -824,7 +836,7 @@ void CGameStateRun::OnShow()
 		basicP2.SetPos(-100, 700);
 		bigBox.SetTopLeft(600, 300);
 		wallPlat.SetTopLeft(400, 650);
-		flag.SetTopLeft(800, 250);
+		flag.SetTopLeft(800, 235);
 
 		backgroundStage10.ShowBitmap();
 
@@ -836,7 +848,7 @@ void CGameStateRun::OnShow()
 		wallPlat.ShowBitmap();
 		flag.ShowBitmap();
 
-		if (character.GetLeft() >= flag.GetLeft()) {
+		if (character.GetLeft() >= flag.GetLeft()-50) {
 			stage = 50;
 		}
 
@@ -853,7 +865,9 @@ void CGameStateRun::OnShow()
 	else if (stage == 100) {
 		GotoGameState(GAME_STATE_OVER);
 	}
+	else if (stage == 201) {
 
+	}//turtorial stage
 	if (ghostMode == true) {
 		DebugModeMsg();
 		character.LoadBitmapByString({ "../resources/cheater.bmp" }, RGB(255, 255, 255));
@@ -864,4 +878,5 @@ void CGameStateRun::OnShow()
 	if (cheatSheet == true) {
 		Cheating.ShowBitmap();
 	}
+	levelIndicator();
 }

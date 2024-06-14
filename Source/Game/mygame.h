@@ -173,6 +173,7 @@ namespace game_framework {
 		void EndMsg();
 		void WinMsg();
 		void DebugModeMsg();
+		void levelIndicator();
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
