@@ -36,16 +36,17 @@ Timeline (Modified Targets) Compiltions
 |      Week7    |   Applying Player Jump Mechanic (DONE) 10% |
 |      Week8    |   Physics Polishing (DONE) 5% |
 |  Week9 (DEMO) |   Basic Level Design (Stage 1, 2, and Demo end screen) (DONE) 5% |
-|      Week10   |   Player Movement Polishing  |
-|      Week11   |   Platform Design   |
-|      Week12   |   Stage Polishing and Collision Polishing  |
-|      Week13   |   Stage Modifiers   |
-|      Week14   |   Death Mechanic   |
-|      Week15   |   Level Designs   |
-|      Week16   |   Stage Polishing   |
-|      Week17   |   Level Designs   |
-|      Week18   |   Polishing   |
-| current completion | (50%) |
+|      Week10   |   Player Movement Polishing (SKIP) |
+|      Week11   |   Platform Design (DONE) 5% |
+|      Week12   |   Stage Polishing and Collision Polishing (DONE) 2% |
+|      Week13   |   Level Designs (DONE) 8% |
+|      Week14   |   Death Mechanic (DONE) 2% |
+|      Week15   |   Level Designs (DONE) 10% |
+|      Week16   |   Stage Polishing (DONE) 3% |
+|      Week17   |   In Game Sprites Update (DONE) 10% |
+|      Week18   |   Polishing (NA) Deadline ends on week 17 |
+| current completion | (90%) |
+#Level Requirement Has Been Reached
 
 
 
