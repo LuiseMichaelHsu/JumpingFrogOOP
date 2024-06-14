@@ -640,7 +640,7 @@ void CGameStateRun::EndMsg() {
 	CDC* pDC = CDDraw::GetBackCDC();
 
 	CTextDraw::ChangeFontLog(pDC, 36, "times new roman", RGB(255, 255, 255));
-	CTextDraw::Print(pDC, 50, 50, "Interact With The Pink Frog To End The Game");
+	CTextDraw::Print(pDC, 50, 50, "Interact With The Pink Frog To Win The Game");
 
 	CDDraw::ReleaseBackCDC();
 }
