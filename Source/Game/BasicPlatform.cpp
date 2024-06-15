@@ -9,7 +9,7 @@ namespace game_framework {
 
 	void BasicPlatform::LoadBitmap()
 	{
-		smallRectangle.LoadBitmapByString({ "../resources/cobble.bmp" }, RGB(255, 255, 255));
+		smallRectangle.LoadBitmapByString({ "resources/cobble.bmp" }, RGB(255, 255, 255));
 	}
 
 	void BasicPlatform::SetPos(int xpos, int ypos)

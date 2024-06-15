@@ -10,7 +10,7 @@
 using namespace game_framework;
 
 /////////////////////////////////////////////////////////////////////////////
-// ³o­Óclass¬°¹CÀ¸ªºµ²§ôª¬ºA(Game Over)
+// ï¿½oï¿½ï¿½classï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½A(Game Over)
 /////////////////////////////////////////////////////////////////////////////
 
 CGameStateOver::CGameStateOver(CGame *g): CGameState(g)
@@ -29,17 +29,17 @@ void CGameStateOver::OnBeginState()
 void CGameStateOver::OnInit()
 {
 	//
-	// ·í¹Ï«Ü¦h®É¡AOnInit¸ü¤J©Ò¦³ªº¹Ï­nªá«Ü¦h®É¶¡¡C¬°Á×§Kª±¹CÀ¸ªº¤H
-	//     µ¥ªº¤£­@·Ð¡A¹CÀ¸·|¥X²{¡uLoading ...¡v¡AÅã¥ÜLoadingªº¶i«×¡C
+	// ï¿½ï¿½Ï«Ü¦hï¿½É¡AOnInitï¿½ï¿½ï¿½Jï¿½Ò¦ï¿½ï¿½ï¿½ï¿½Ï­nï¿½ï¿½Ü¦hï¿½É¶ï¿½ï¿½Cï¿½ï¿½ï¿½×§Kï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½H
+	//     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Ð¡Aï¿½Cï¿½ï¿½ï¿½|ï¿½Xï¿½{ï¿½uLoading ...ï¿½vï¿½Aï¿½ï¿½ï¿½Loadingï¿½ï¿½ï¿½iï¿½×¡C
 	//
-	ShowInitProgress(66, "Initialize...");	// ±µ­Ó«e¤@­Óª¬ºAªº¶i«×¡A¦¹³B¶i«×µø¬°66%
+	ShowInitProgress(66, "Initialize...");	// ï¿½ï¿½ï¿½Ó«eï¿½@ï¿½Óªï¿½ï¿½Aï¿½ï¿½ï¿½iï¿½×¡Aï¿½ï¿½ï¿½Bï¿½iï¿½×µï¿½ï¿½ï¿½66%
 	//
-	// ¶}©l¸ü¤J¸ê®Æ
+	// ï¿½}ï¿½lï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½
 	//
-	Sleep(1000);				// ©ñºC¡A¥H«K¬Ý²M·¡¶i«×¡A¹ê»Ú¹CÀ¸½Ð§R°£¦¹Sleep
+	Sleep(1000);				// ï¿½ï¿½Cï¿½Aï¿½Hï¿½Kï¿½Ý²Mï¿½ï¿½ï¿½iï¿½×¡Aï¿½ï¿½Ú¹Cï¿½ï¿½ï¿½Ð§Rï¿½ï¿½ï¿½ï¿½Sleep
 	//
-	// ³Ì²×¶i«×¬°100%
-	endBackground.LoadBitmapByString({ "../resources/gameover.bmp" });
+	// ï¿½Ì²×¶iï¿½×¬ï¿½100%
+	endBackground.LoadBitmapByString({ "resources/gameover.bmp" });
 	endBackground.SetTopLeft(0, 0);
 	//
 	ShowInitProgress(100, "OK!");

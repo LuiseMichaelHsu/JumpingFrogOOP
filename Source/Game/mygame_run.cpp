@@ -12,7 +12,7 @@
 using namespace game_framework;
 
 /////////////////////////////////////////////////////////////////////////////
-// ³o­Óclass¬°¹CÀ¸ªº¹CÀ¸°õ¦æª«¥ó¡A¥D­nªº¹CÀ¸µ{¦¡³£¦b³o¸Ì
+// ï¿½oï¿½ï¿½classï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½æª«ï¿½ï¿½Aï¿½Dï¿½nï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½bï¿½oï¿½ï¿½
 /////////////////////////////////////////////////////////////////////////////
 
 CGameStateRun::CGameStateRun(CGame *g) : CGameState(g)
@@ -34,7 +34,7 @@ void CGameStateRun::OnBeginState()
 	cheatSheet = false;
 }
 
-void CGameStateRun::OnMove()							// ²¾°Ê¹CÀ¸¤¸¯À
+void CGameStateRun::OnMove()							// ï¿½ï¿½ï¿½Ê¹Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 {
 	//Stage Changer
 	if (character.GetTop() <= -50) {
@@ -87,62 +87,62 @@ void CGameStateRun::OnMove()							// ²¾°Ê¹CÀ¸¤¸¯À
 	}
 }
 
-void CGameStateRun::OnInit()  								// ¹CÀ¸ªºªì­È¤Î¹Ï§Î³]©
+void CGameStateRun::OnInit()  								// ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¤Î¹Ï§Î³]ï¿½
 {
-	basicP1.smallRectangle.LoadBitmapByString({ "../resources/cobble.bmp" }, RGB(255, 255, 255));
-	basicP2.smallRectangle.LoadBitmapByString({ "../resources/cobble.bmp" }, RGB(255, 255, 255));
-	basicP3.smallRectangle.LoadBitmapByString({ "../resources/cobble.bmp" }, RGB(255, 255, 255));
-	basicP4.smallRectangle.LoadBitmapByString({ "../resources/cobble.bmp" }, RGB(255, 255, 255));
+	basicP1.smallRectangle.LoadBitmapByString({ "resources/cobble.bmp" }, RGB(255, 255, 255));
+	basicP2.smallRectangle.LoadBitmapByString({ "resources/cobble.bmp" }, RGB(255, 255, 255));
+	basicP3.smallRectangle.LoadBitmapByString({ "resources/cobble.bmp" }, RGB(255, 255, 255));
+	basicP4.smallRectangle.LoadBitmapByString({ "resources/cobble.bmp" }, RGB(255, 255, 255));
 
-	Cheating.LoadBitmapByString({ "../resources/cheatsheet.bmp" });
+	Cheating.LoadBitmapByString({ "resources/cheatsheet.bmp" });
 	Cheating.SetTopLeft(200, 200);
 
-	backgroundStage1.LoadBitmapByString({ "../resources/firstStage.bmp" });
+	backgroundStage1.LoadBitmapByString({ "resources/firstStage.bmp" });
 	backgroundStage1.SetTopLeft(0, 0);
 
-	backgroundStage2.LoadBitmapByString({ "../resources/secondStage.bmp" });
+	backgroundStage2.LoadBitmapByString({ "resources/secondStage.bmp" });
 	backgroundStage2.SetTopLeft(0, 0);
 
-	backgroundStage3.LoadBitmapByString({ "../resources/level3.bmp" });
+	backgroundStage3.LoadBitmapByString({ "resources/level3.bmp" });
 	backgroundStage3.SetTopLeft(0, 0);
 
-	backgroundStage4.LoadBitmapByString({ "../resources/level4.bmp" });
+	backgroundStage4.LoadBitmapByString({ "resources/level4.bmp" });
 	backgroundStage4.SetTopLeft(0, 0);
 
-	backgroundStage5.LoadBitmapByString({ "../resources/level5.bmp" });
+	backgroundStage5.LoadBitmapByString({ "resources/level5.bmp" });
 	backgroundStage5.SetTopLeft(0, 0);
 
-	backgroundStage6.LoadBitmapByString({ "../resources/level6.bmp" });
+	backgroundStage6.LoadBitmapByString({ "resources/level6.bmp" });
 	backgroundStage6.SetTopLeft(0, 0);
 
-	backgroundStage7.LoadBitmapByString({ "../resources/level7.bmp" });
+	backgroundStage7.LoadBitmapByString({ "resources/level7.bmp" });
 	backgroundStage7.SetTopLeft(0, 0);
 
-	backgroundStage8.LoadBitmapByString({ "../resources/level8.bmp" });
+	backgroundStage8.LoadBitmapByString({ "resources/level8.bmp" });
 	backgroundStage8.SetTopLeft(0, 0);
 
-	backgroundStage9.LoadBitmapByString({ "../resources/level9.bmp" });
+	backgroundStage9.LoadBitmapByString({ "resources/level9.bmp" });
 	backgroundStage9.SetTopLeft(0, 0);
 
-	backgroundStage10.LoadBitmapByString({ "../resources/level10.bmp" });
+	backgroundStage10.LoadBitmapByString({ "resources/level10.bmp" });
 	backgroundStage10.SetTopLeft(0, 0);
 
-	flag.LoadBitmapByString({ "../resources/flag.bmp" });
+	flag.LoadBitmapByString({ "resources/flag.bmp" });
 	flag.SetTopLeft(0, 0);
 
-	win.LoadBitmapByString({ "../resources/ggwp.bmp" });
+	win.LoadBitmapByString({ "resources/ggwp.bmp" });
 	win.SetTopLeft(0, 0);
 
 	//wrog 62x62
-	character.LoadBitmapByString({ "../resources/wrog.bmp" }, RGB(255, 255, 255));
+	character.LoadBitmapByString({ "resources/wrog.bmp" }, RGB(255, 255, 255));
 	character.SetTopLeft(500, 500);
 
 	//big box platform to stand on 400 pixels height, and 400 pixels width
-	bigBox.LoadBitmapByString({ "../resources/box.bmp" }, RGB(255, 255, 255));
+	bigBox.LoadBitmapByString({ "resources/box.bmp" }, RGB(255, 255, 255));
 	bigBox.SetTopLeft(0, 0);
 
 	//wall 445 height, 80 width
-	wallPlat.LoadBitmapByString({ "../resources/wall.bmp" }, RGB(255, 255, 255));
+	wallPlat.LoadBitmapByString({ "resources/wall.bmp" }, RGB(255, 255, 255));
 	wallPlat.SetTopLeft(0, 0);
 
 	ground1.LoadBitmap();
@@ -605,23 +605,23 @@ double CGameStateRun::getDistance(int x1, int y1, int x2, int y2){
 	return sqrt(pow(xDistance, 2) + pow(yDistance, 2));
 }
 
-void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // ³B²z·Æ¹«ªº°Ê§@
+void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // ï¿½Bï¿½zï¿½Æ¹ï¿½ï¿½ï¿½ï¿½Ê§@
 {
 }
 
-void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// ³B²z·Æ¹«ªº°Ê§@
+void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// ï¿½Bï¿½zï¿½Æ¹ï¿½ï¿½ï¿½ï¿½Ê§@
 {
 }
 
-void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// ³B²z·Æ¹«ªº°Ê§@
+void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// ï¿½Bï¿½zï¿½Æ¹ï¿½ï¿½ï¿½ï¿½Ê§@
 {
 }
 
-void CGameStateRun::OnRButtonDown(UINT nFlags, CPoint point)  // ³B²z·Æ¹«ªº°Ê§@
+void CGameStateRun::OnRButtonDown(UINT nFlags, CPoint point)  // ï¿½Bï¿½zï¿½Æ¹ï¿½ï¿½ï¿½ï¿½Ê§@
 {
 }
 
-void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// ³B²z·Æ¹«ªº°Ê§@
+void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// ï¿½Bï¿½zï¿½Æ¹ï¿½ï¿½ï¿½ï¿½Ê§@
 {
 }
 
@@ -870,10 +870,10 @@ void CGameStateRun::OnShow()
 	}//turtorial stage
 	if (ghostMode == true) {
 		DebugModeMsg();
-		character.LoadBitmapByString({ "../resources/cheater.bmp" }, RGB(255, 255, 255));
+		character.LoadBitmapByString({ "resources/cheater.bmp" }, RGB(255, 255, 255));
 	}
 	else {
-		character.LoadBitmapByString({ "../resources/wrog.bmp" }, RGB(255, 255, 255));
+		character.LoadBitmapByString({ "resources/wrog.bmp" }, RGB(255, 255, 255));
 	}
 	if (cheatSheet == true) {
 		Cheating.ShowBitmap();

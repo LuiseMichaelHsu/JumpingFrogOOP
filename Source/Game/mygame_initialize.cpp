@@ -9,7 +9,7 @@
 
 using namespace game_framework;
 /////////////////////////////////////////////////////////////////////////////
-// ³o­Óclass¬°¹CÀ¸ªº¹CÀ¸¶}ÀYµe­±ª«¥ó
+// ï¿½oï¿½ï¿½classï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½}ï¿½Yï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 /////////////////////////////////////////////////////////////////////////////
 
 CGameStateInit::CGameStateInit(CGame* g) : CGameState(g)
@@ -19,24 +19,24 @@ CGameStateInit::CGameStateInit(CGame* g) : CGameState(g)
 void CGameStateInit::OnInit()
 {
 	//
-	// ·í¹Ï«Ü¦h®É¡AOnInit¸ü¤J©Ò¦³ªº¹Ï­nªá«Ü¦h®É¶¡¡C¬°Á×§Kª±¹CÀ¸ªº¤H
-	//     µ¥ªº¤£­@·Ð¡A¹CÀ¸·|¥X²{¡uLoading ...¡v¡AÅã¥ÜLoadingªº¶i«×¡C
+	// ï¿½ï¿½Ï«Ü¦hï¿½É¡AOnInitï¿½ï¿½ï¿½Jï¿½Ò¦ï¿½ï¿½ï¿½ï¿½Ï­nï¿½ï¿½Ü¦hï¿½É¶ï¿½ï¿½Cï¿½ï¿½ï¿½×§Kï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½ï¿½H
+	//     ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½@ï¿½Ð¡Aï¿½Cï¿½ï¿½ï¿½|ï¿½Xï¿½{ï¿½uLoading ...ï¿½vï¿½Aï¿½ï¿½ï¿½Loadingï¿½ï¿½ï¿½iï¿½×¡C
 	//
-	ShowInitProgress(0, "Start Initialize...");	// ¤@¶}©lªºloading¶i«×¬°0%
+	ShowInitProgress(0, "Start Initialize...");	// ï¿½@ï¿½}ï¿½lï¿½ï¿½loadingï¿½iï¿½×¬ï¿½0%
 	//
 	// 
-	background.LoadBitmapByString({ "../resources/titleScreen.bmp" });
+	background.LoadBitmapByString({ "resources/titleScreen.bmp" });
 	background.SetTopLeft(0, 0);
-	backgroundSlide.LoadBitmapByString({ "../resources/titleScreen.bmp" });
+	backgroundSlide.LoadBitmapByString({ "resources/titleScreen.bmp" });
 	backgroundSlide.SetTopLeft(0, 0);
-	sPointer.LoadBitmapByString({ "../resources/wrog.bmp" });
+	sPointer.LoadBitmapByString({ "resources/wrog.bmp" });
 	sPointer.SetTopLeft(0, 0);
 	//
-	// ¶}©l¸ü¤J¸ê®Æ
+	// ï¿½}ï¿½lï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½
 	//
-	Sleep(1000);				// ©ñºC¡A¥H«K¬Ý²M·¡¶i«×¡A¹ê»Ú¹CÀ¸½Ð§R°£¦¹Sleep
+	Sleep(1000);				// ï¿½ï¿½Cï¿½Aï¿½Hï¿½Kï¿½Ý²Mï¿½ï¿½ï¿½iï¿½×¡Aï¿½ï¿½Ú¹Cï¿½ï¿½ï¿½Ð§Rï¿½ï¿½ï¿½ï¿½Sleep
 	//
-	// ¦¹OnInit°Ê§@·|±µ¨ìCGameStaterRun::OnInit()¡A©Ò¥H¶i«×ÁÙ¨S¨ì100%
+	// ï¿½ï¿½OnInitï¿½Ê§@ï¿½|ï¿½ï¿½ï¿½ï¿½CGameStaterRun::OnInit()ï¿½Aï¿½Ò¥Hï¿½iï¿½ï¿½ï¿½Ù¨Sï¿½ï¿½100%
 	//
 }
 

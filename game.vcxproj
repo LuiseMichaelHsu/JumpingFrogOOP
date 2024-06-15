@@ -232,10 +232,6 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Resources\gamecurs.cur" />
-    <None Include="Resources\GAME.RC2" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Source\Core\game.cpp" />
     <ClCompile Include="Source\Core\gameDoc.cpp" />
     <ClCompile Include="Source\Core\gameView.cpp" />
@@ -269,16 +265,47 @@
     <ResourceCompile Include="Source\Core\game.rc" />
   </ItemGroup>
   <ItemGroup>
-	<Content Include="Resources\wrog.bmp" />
-	<Content Include="Resources\wellsoreal.bmp" />
     <Image Include="resources\bitmap1.bmp" />
-    <Image Include="Resources\Game Framework.png" />
     <Image Include="resources\game.ico" />
     <Image Include="resources\gameDoc.ico" />
-    <Image Include="Resources\GAME_FRAMEWORK.bmp" />
-    <Image Include="Resources\GAME_FRAMEWORK.ico" />
     <Image Include="resources\icon1.ico" />
     <Image Include="resources\Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\bigBox.bmp" />
+    <Content Include="Resources\box.bmp" />
+    <Content Include="Resources\cheater.bmp" />
+    <Content Include="Resources\cheatsheet.bmp" />
+    <Content Include="Resources\cobble.bmp" />
+    <Content Include="Resources\environment-preview.png" />
+    <Content Include="Resources\firstStage.bmp" />
+    <Content Include="Resources\flag.bmp" />
+    <Content Include="Resources\frog.bmp" />
+    <Content Include="Resources\GAME.ICO" />
+    <Content Include="Resources\GAME.RC2" />
+    <Content Include="Resources\gamecurs.cur" />
+    <Content Include="Resources\gameDoc.ico" />
+    <Content Include="Resources\gameover.bmp" />
+    <Content Include="Resources\GAME_FRAMEWORK.bmp" />
+    <Content Include="Resources\ggwp.bmp" />
+    <Content Include="Resources\level10.bmp" />
+    <Content Include="Resources\level3.bmp" />
+    <Content Include="Resources\level4.bmp" />
+    <Content Include="Resources\level5.bmp" />
+    <Content Include="Resources\level6.bmp" />
+    <Content Include="Resources\level7.bmp" />
+    <Content Include="Resources\level8.bmp" />
+    <Content Include="Resources\level9.bmp" />
+    <Content Include="Resources\mainLeft.bmp" />
+    <Content Include="Resources\platformBase.bmp" />
+    <Content Include="Resources\platformStandMid.bmp" />
+    <Content Include="Resources\secondStage.bmp" />
+    <Content Include="Resources\smallRectangle.bmp" />
+    <Content Include="Resources\titleScreen.bmp" />
+    <Content Include="Resources\Toolbar.bmp" />
+    <Content Include="Resources\wall.bmp" />
+    <Content Include="Resources\wellsoreal.bmp" />
+    <Content Include="Resources\wrog.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
